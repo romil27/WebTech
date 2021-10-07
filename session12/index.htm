@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Romil</title>
+    <link rel="stylesheet" href="ex1.css" type="text/css" />
+    <style>
+        body {background-color: dimgrey; border-style: solid; border-width: 4px; border-color: black; padding: 5px}
+        h1 {text-align: center; font-family: Arial;}
+        p {text-align: center; font-family: Arial; float: inline-end;}
+        span {color: brown;}
+        
+    </style>
+    <script>
+
+        function ChgStyle()
+        {
+            x=document.getElementById("myh1")
+         x.style.color="green";
+         x.style.font="30pt 'Comic Sans MS'";
+         x.style.textAlign="center";
+        } 
+
+        function ChgToImg1()
+        {
+            document.getElementById("myimg").src="image.jpg";
+        }
+
+        function ChgToImg2()
+        {
+            document.getElementById("myimg").src="IMG_5338.jpg";
+        }
+        
+        function ChgStyle1()
+        {
+            document.getElementById("abc").style.fontWeight="bold";
+        }
+
+        function ChgStyle2()
+        {
+            document.getElementById("abc").style.fontWeight="normal";
+        }
+ 
+      
+     </script>		
+</head>
+<body>
+    <h1 id="myh1" style="font-family: Verdana" onclick=ChgStyle()>Introduction</h1>
+    <p>Hi, I'm <span>Romil</span> and I'm from Mumbai, India. The best way to contact me is through email. </p>
+    <h1> <img src="IMG_5338.jpg" width="150" alt="image unavailable" id="myimg" onmouseover="ChgToImg1()" onmouseout="ChgToImg2()" /> </h1>
+    <hr>
+    <br>
+    <p>A fun fact about me is that this will be my <span id="abc" onmouseover="ChgStyle1()" onmouseout="ChgStyle2()">first</span> fully in person semester at college. </p>
+    <p> You can learn more about my interests <a href="interests.html">here</a></p>
+    <hr>
+</body>
+</html>
