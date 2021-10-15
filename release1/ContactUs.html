@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Us - Form to Reach out and get in touch">
+    <meta name="keywords" content="Fill up the form below to reach out, First Name, Last Name, Gender, Comments, Submit, Reset">
+    <meta name="author" content="Romil Agarwal">
+    <link rel="stylesheet" href="externalstylesheet.css" type="text/css">
+    <title>Contact Us</title>
+    <style>
+        body {background-image: linear-gradient(#03bfb5, #ff9700, #000b8d);}
+        h2 {text-align: center;}
+        h1 {text-align: center; font-size: 30pt;}
+        div.body {border-style: solid; border-color: rgb(0,0,0); text-align: justify; border-radius: 25px; background-color: white; margin-right: 100px; margin-left: 100px; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; text-align: center;} 
+        p.text {text-align: justify;}
+    </style>
+</head>
+<body>
+    <div class="Navigation_Bar">
+        <ul>
+            <li>
+                <a href="index.html" class="active"> Home </a>
+            </li>
+            <li class="DropdownList">
+                <a href="Mercedes.html">Mercedes F1</a>
+                <div class="DropdownBox">
+                    <a href="Lewis.html">Lewis Hamilton</a>
+                    <a href="Valtteri.html">Valtteri Bottas</a>
+                </div>
+            </li>
+            <li class="DropdownList">
+                <a href="McLaren.html">McLaren Racing</a>
+                <div class="DropdownBox">
+                    <a href="Daniel.html">Daniel Ricciardo</a>
+                    <a href="Lando.html"> Lando Norris</a>
+                </div>
+            </li>
+            <li class="DropdownList">
+                <a href="RedBull.html">Red Bull Racing</a>
+                <div class="DropdownBox">
+                    <a href="Max.html">Max Verstappen</a>
+                    <a href="Checo.html">Sergio Perez</a>
+                </div>
+            </li>
+            <li>
+                <a href="ContactUs.html">Contact Us</a>
+            </li>
+            <li>
+                <a href="AboutMe.html">About Me</a>
+            </li>
+        </ul>
+        </div>
+        <h1> Contact Us</h1>
+        <div class="body">
+            <h2>Fill up the form below to reach out!</h2>
+            <form action="mailer.php" method="post"> 
+                <table style="margin-right: auto; margin-left: auto;">
+                <tr>
+                    <td>First Name: </td>
+                    <td><input type="text" name="firstname" maxlength="150"/> </td>
+                    <td>Last Name: </td>
+                    <td><input type="text" name="lastname" maxlength="150"/></td>
+                    <td>E-Mail Address: </td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+            </table>
+                <p>
+                    Gender: Male <input type="radio" name="gender" value="male"> Female <input type="radio" name="gender" value="female">
+                </p>
+                <p>
+                    What did you think of the website?
+                    <select name="D1">
+                        <option value="Very Bad"> Very Bad </option>
+                        <option value="Bad"> Bad </option>
+                        <option value="Average"> Average </option>
+                        <option value="Good"> Good </option>
+                        <option value="Very Good"> Very Good </option>
+                        <option value="Excellent"> Excellent </option>
+                    </select>
+                </p>
+                
+                <p>Please add any comments you have. </p>
+                    <textarea name="Comments" rows="5" cols="45"></textarea>
+                <table style="margin-left: auto; margin-right: auto;">
+                    <tr>
+                    <td><input type="Submit" value="Submit" name="Submit"/></td>
+                    <td><input type="reset" value="Reset" name="Reset"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+div.Navigation_Bar {top: 0px; text-align: center; width: 100%;}
+div.Navigation_Bar ul {list-style-type: none; margin: 0; padding: 0; overflow: auto; background-color: black; border-radius: 15px; text-align: center; display: inline-block;}
+div.Navigation_Bar li {float: left;}
+div.Navigation_Bar li a {display: inline-block; color: rgb(255, 255, 255); text-align: center; padding: 15px; text-decoration: none; min-width: 100px;}
+div.Navigation_Bar a.Active {background-color: rgb(135, 205, 235);}
+div.Navigation_Bar li a:hover, .Navigation_Bar a.Active:hover {background-color: rgb(245, 32, 64); color: rgb(255, 255, 255);}
+div.Navigation_Bar .DropdownBox {display: none; background-color: black; position: absolute; min-width: 100px; z-index: 1; }
+div.Navigation_Bar .DropdownBox a {display: block; text-align: center;}
+div.Navigation_Bar li.DropdownList:hover .DropdownBox {display: block;}
+body {font-family: 'Rubik', sans-serif; background-attachment: fixed;}
+
+ 
