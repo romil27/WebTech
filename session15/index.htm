@@ -14,11 +14,13 @@
             document.getElementById("b1").style.left=x;
             var text = new Array ("Click Me", "Move Me", "Click Here", "Button", "Next");
             document.getElementById("b1").innerHTML=text[Math.floor(Math.random()*text.length)];
+            var bgcolors = new Array ("red", "blue", "green", "yellow", "orange", "purple", "pink", "grey", "skyblue", "cyan", "magenta", "black", "white", "violet", "indigo");
+            document.getElementById("bod").style.backgroundColor=bgcolors[Math.floor(Math.random()*bgcolors.length)];
         }
     </script>
 </head>
    
-<body>
+<body id="bod">
     <button style="position:absolute; top:0px; left:0px;" id="b1" onclick="MoveButton()">Click Me</button>
     
 </body>
