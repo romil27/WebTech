@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Romil</title>
+    <link rel="stylesheet" href="ex1.css" type="text/css" />
+    <style>
+        body {background-color: dimgrey; border-style: solid; border-width: 4px; border-color: black; padding: 5px}
+        h1 {text-align: center; font-family: Arial;}
+        p {text-align: center; font-family: Arial; float: inline-end;}
+        span {color: brown;}
+        
+    </style>
+    <script>
+        var h1r = new Array ("red", "orange", "yellow", "green", "blue", "indigo", "violet")
+            var x = 0
+        function ChgColor()
+        {
+            
+            document.getElementById("myh1").style.color=h1r[x]
+            x = x+1
+            if (x == h1r.length)
+            {
+                x = 0
+            }
+            setTimeout("ChgColor()", 750);
+        }
+        
+
+    </script>
+</head>
+<body onload="ChgColor()">
+    <h1 style="color:red;" id="myh1">Introduction</h1>
+    <p>Hi, I'm <span>Romil</span> and I'm from Mumbai, India. The best way to contact me is through email. </p>
+    <h1> <img src="IMG_5338.jpg" width="150" alt="image unavailable" /> </h1>
+    <hr>
+    <br>
+    <p>A fun fact about me is that this will be my first fully in person semester at college. </p>
+    <p> You can learn more about my interests <a href="interests.html">here</a></p>
+    <hr>
+</body>
+</html>
