@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <script>
+        function draw()
+        {
+            var canvas = document.getElementById('canv');
+			var ctx = canvas.getContext('2d');
+			ctx.beginPath();
+			ctx.arc(200,200,100,0,Math.PI*2,true); 
+			ctx.fillStyle="black"
+			ctx.fill();
+
+            ctx.beginPath();
+			ctx.arc(105,105,60,0,Math.PI*2,true);
+			ctx.fillStyle="black"
+			ctx.fill();
+
+            ctx.beginPath();
+			ctx.arc(285,105,60,0,Math.PI*2,true); 
+			ctx.fill();
+
+            ctx.font = "30px Verdana";
+            ctx.fillText("Mickey Mouse!!!!!!", 75, 350);
+        }
+       
+        </script>
+        <style>
+            canvas {border-style: solid; border-width: 1px;}
+        </style>
+</head>
+<body onload="draw()">
+    <canvas id="canv" width="400" height="400"></canvas>
+</body>
+</html>
