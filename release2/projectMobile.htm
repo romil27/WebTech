@@ -25,21 +25,21 @@
     <title>Formula Top Three</title>
     <link rel="stylesheet" href="externalstylesheet.css" type="text/css">
     <style>
+    .Navigation_Bar {width: 100%;}
     body {background-image: url(checkered_flag_background.jpg); background-repeat: no-repeat; background-size: cover; }
     /* The background image has been sourced from: https://www.wallpapertip.com/wmimgs/76-763647_chequered-flag-data-src-full-340093-waving-checkered.jpg and it has been edited on Canva for use.*/
     h2 {text-align: center; font-weight: normal;}
     h1 {text-align: center; font-size: 25pt; font-weight: normal;}
-    div.body {border-style: solid; border-color: rgb(245,32,64); text-align: justify; border-radius: 25px; background-color: white; margin-right: 100px; margin-left: 100px; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px;} 
+    div.body {border-style: solid; border-color: rgb(245,32,64); text-align: justify; border-radius: 25px; background-color: white; margin-right: 5%; margin-left: 5%; padding-left: 0.1%; padding-right: 0.1%; padding-top: 0.025%; padding-bottom: 0.025%;} 
     p.text {text-align: justify;}
-    div.main {border-style: solid; border-color: rgb(245, 32, 64); border-radius: 25px; background-color: white; margin-left: 100px; margin-right: 100px; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px;}
+    div.main {border-style: solid; border-color: rgb(245, 32, 64); border-radius: 25px; background-color: white; margin-left: 5%; margin-right: 5%px; padding-left: 0.1%; padding-right: 0.1%; padding-top: 0.025%; padding-bottom: 0.025%;}
     
     
     th {background-color: rgb(245, 32, 64); color: white; font-size: 25pt;}
     td {font-size: 20pt;}
     tr:nth-child(even) {background-color:lightgray;}
     hr {height:5px; background-color:black;}
-    img.racing {padding-left: 0px; position: relative; top: 20px;}
-    .cap {text-align: center; font-weight: bold;}
+    .cap {text-align: center; font-weight: normal;}
     .hide {display: none;}
     #myh1 {display: none;}
    
@@ -106,19 +106,6 @@
             document.getElementById("anim3").innerHTML="Review of Mexico Grand Prix"
 
         }
-        var imageList = new Array("https://www.formula1.com/content/dam/fom-website/sutton/2021/BahrainTesting/Sunday/1306961117.jpg.transform/9col-retina/image.jpg","https://www.formula1.com/content/dam/fom-website/sutton/2021/BahrainTesting/Sunday/1306961885.jpg.transform/9col-retina/image.jpg","https://www.formula1.com/content/dam/fom-website/sutton/2021/BahrainTesting/Sunday/1306975727.jpg.transform/9col-retina/image.jpg")  //filenames of pictures
-        var counter=0  //State variable to identify which picture is showing
-        function playSlideShow()
-        {
-            document.getElementById("slideshowimg").src=imageList[counter]   // Show the picture from the list
-            counter = counter+1 // Update the counter to go to the next picture
-            if (counter == imageList.length)  // If past end of list, start again at first picture
-            {
-                counter=0
-            }
-            setTimeout("playSlideShow()",2000)  // This starts the function again in 2 seconds
-        }
-       
     </script>
 </head>
 <body id="bod" onload="RaceCar(), TextShadow(), playSlideShow()">
