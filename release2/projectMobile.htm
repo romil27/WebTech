@@ -42,6 +42,7 @@
     .cap {text-align: center; font-weight: normal;}
     .hide {display: none;}
     #myh1 {display: none;}
+    img.racing {padding-left: 0%; position: relative; top: 2%;}
    
     
 
@@ -70,9 +71,9 @@
         var leftpad = 0
         function RaceCar()
         {
-            leftpad = leftpad + 30
-            document.getElementById("racecar").style.paddingLeft= leftpad + 30 + "px";
-            if (leftpad < 1290)
+            leftpad = leftpad + 3
+            document.getElementById("racecar").style.paddingLeft= leftpad + 2 + "%";
+            if (leftpad < 100)
             {
                 setTimeout("RaceCar()", 1);
             }
@@ -109,6 +110,12 @@
     </script>
 </head>
 <body id="bod" onload="RaceCar(), TextShadow(), playSlideShow()">
+    <div class="RaceAnim">
+        <img class="racing" src="https://www.formula1.com/content/dam/fom-website/teams/2021/red-bull-racing.png.transform/6col/image.png" height="10%" id="racecar">
+        <hr>
+
+
+    </div>
     <div class="Navigation_Bar">
         <ul>
             <li>
