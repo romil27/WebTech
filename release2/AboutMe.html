@@ -16,6 +16,14 @@
         div.body {border-style: solid; border-color: rgb(0,0,0); text-align: justify; border-radius: 25px; background-color: white; margin-right: 100px; margin-left: 100px; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; text-align: center;} 
         p.text {text-align: justify;}
     </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#b1").click(function(){
+                $("#app").append("E-Mail ID: ragarwal6@babson.edu");
+            })
+        });
+    </script>
 </head>
 <body>
     <div class="Navigation_Bar">
@@ -67,6 +75,7 @@
             <p>
                 In terms of Formula 1, my favourite drivers are Max Verstappen, and Daniel Ricciardo, both for different reasons. Max Verstappen is the embodiment of dedication and hardwork. Even off track, you will always see him training, working out, or doing something productive to better his racing. On the other hand, we have Daniel Ricciardo, who is the embodiment of enjoyment. Apart from racing, he's known as Formula 1's own "joker", as you can always finding him laughing and goofing around both on and off track. If you want to have a good time, Daniel Ricciardo is your man. These two drivers showcase two different aspects of life, and two different ways to live life. I feel like we can learn something from the both of them. 
             </p>
+            <p id="app"><button id="b1">Click to Reveal E-Mail ID</button> &nbsp; </p>
             
 
         </div>

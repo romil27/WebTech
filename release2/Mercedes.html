@@ -18,6 +18,16 @@
         tr:nth-child(even) {background-color:lightgray;}
         p {text-align: justify;}
     </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#b1").click(function(){
+                $("#circmap").animate({width: '325px'})
+            })
+
+        });
+
+    </script>
 </head>
 <body>
     <div class="Navigation_Bar">
@@ -86,12 +96,14 @@
       <table style="padding-left: 30px; margin-right: 100px;" >
           <tr>
               <td>Car Design: </td>
-              <td><img src="mercedes_car.jpg" width="225" alt="Mercedes's Car"><!--Source:https://www.mercedesamgf1.com/en/news/2021/03/introducing-w12-mercedes-f1-challenger-2021-season/_jcr_content/root/paragraph_1433537552/paragraph-right/paragraphimage/image/MQ6-8-image-20210302093825/1web.jpeg Image has been edited on Canva.--></td>
+              <td><img src="https://www.formula1.com/content/dam/fom-website/teams/2021/mercedes.png.transform/6col/image.png" width="225" alt="Mercedes's Car"></td>
               <td></td>
               <td>Home Circuit:</td>
-              <td><img src="silverstone.jpg" width="225" alt="Silverstone Circuit"><!--Source:https://www.mercedesamgf1.com/en/news/2021/03/introducing-w12-mercedes-f1-challenger-2021-season/_jcr_content/root/paragraph_1433537552/paragraph-right/paragraphimage/image/MQ6-8-image-20210302093825/1web.jpeg Image has been edited on Canva.--> </td>
+              <td><img id="circmap" src="https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Great_Britain_Circuit.png.transform/7col/image.png" width="225" alt="Silverstone Circuit"></td>
           </tr>
+          
       </table>
+      <p style="text-align: right; padding-right: 200px;"><button id="b1">Click to Enlarge</button> </p>
       <h2>About the Team Principal</h2>
       <p> 
             <img src="https://www.thepaddockmagazine.com/wp-content/uploads/2021/04/rsz_m185600.jpg" width="500" style="float: right; padding-left: 20px;" alt="Portrait of Toto Wolff"  >

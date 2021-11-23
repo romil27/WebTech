@@ -11,6 +11,17 @@
     <!--You can locate the numbered list with indented sublists inside this index.html from Line 87 onwards-->
     <!--You can find hotspots in the McLaren.html, Mercedes.html and RedBull.html in line 120-->
     <!--The video can be found on this index page in line 132. Background Music can be found with controls in 134-->
+    <!--JavaScript #1: The site options section in the home page at the very end allows the user to toggle between two background opacity options.-->
+    <!--JavaScript #2: Clicking the button at the end of the Race Review Section changes the entire text of the div, and instead gives the review of Mexico GP.-->
+    <!--Javascript #3: The Contact Us Page uses JavaScipt Form Validation-->
+    <!--JavaScript #4: On the Index Page, the first div with H1 Welcome to the world of Formula 1 has a slideshow just beneath it. -->
+    <!--JavaScript #5: The JavaScript animation is present at the top of the homepage, where on page load, the Formula 1 Car Zooms from Right to left. -->
+    <!--JavaScript #6: Everytime the Home Page loads, the text-shadow of "Formula Top Three" randomly changes using a Javascript Array.-->
+    <!--JQuery #1: Clicking the heading of each div on the Index Page will toggle the content inside.-->
+    <!--JQuery #2: Clicking the Button Appends my Email ID within the same P tag on the About Me Page.-->
+    <!--JQuery #3: When the Home Page loads, the "Formula Top Three" heading fades in.-->
+    <!--JQuery #4: Clicking the Button below each circuit map on the Team Pages (Mercedes, McLaren and Red Bull) enlarges the circuit map image-->
+    
     <title>Formula Top Three</title>
     <link rel="stylesheet" href="externalstylesheet.css" type="text/css">
     <style>
@@ -27,17 +38,40 @@
     td {font-size: 20pt;}
     tr:nth-child(even) {background-color:lightgray;}
     hr {height:5px; background-color:black;}
-    img.racing {padding-left: 1280px; position: relative; top: 20px;}
+    img.racing {padding-left: 0px; position: relative; top: 20px;}
+    .cap {text-align: center; font-weight: bold;}
+    .hide {display: none;}
+    #myh1 {display: none;}
+   
     
 
     </style>
+   <script src="https://code.jquery.com/jquery.min.js"></script>
     <script>
-        var leftpad = 1280
+        $(function(){
+            $("#anim1").click(function(){
+                $("#hid1").slideToggle("slow");
+                $("#cap1").toggle("hide");
+            })
+
+            $("#anim2").click(function(){
+                $("#hid2").slideToggle("slow");
+                $("#cap2").toggle("hide");
+            })
+            $("#anim3").click(function(){
+                $("#hid3").slideToggle("slow");
+                $("#cap3").toggle("hide");
+            })
+            $("#myh1").fadeIn("slow");
+            
+        
+        });
+        var leftpad = 0
         function RaceCar()
         {
-            leftpad = leftpad - 20
-            document.getElementById("racecar").style.paddingLeft= leftpad - 20 + "px";
-            if (leftpad > 0)
+            leftpad = leftpad + 30
+            document.getElementById("racecar").style.paddingLeft= leftpad + 30 + "px";
+            if (leftpad < 1290)
             {
                 setTimeout("RaceCar()", 1);
             }
@@ -47,12 +81,48 @@
             var colors = new Array ("#FF0000", "#ff9700", "#03bfb5", "#000b8d")
             document.getElementById("myh1").style.textShadow="2px" + " 2px" + colors[Math.floor(Math.random()*colors.length)];
         }
+        function FontSize()
+        {
+            if (document.getElementById("sel").value =="S") document.getElementsByTagNameNS("p").FontSize="12pt";
+            else if (document.getElementById("sel").value =="M") document.getElementsByTagNameNS("p").FontSize="18pt";
+            else if (document.getElementById("sel").value =="L") document.getElementsByTagNameNS("p").FontSize="24pt";
+        }
+        function BgOpacity()
+        {
+            document.body.style.backgroundImage="url('https://www.wallpapertip.com/wmimgs/76-763647_chequered-flag-data-src-full-340093-waving-checkered.jpg')";
+        }
+        function RevOpacity()
+        {
+            document.body.style.backgroundImage="url('checkered_flag_background.jpg')"
+        }
+        function ChangeReview()
+        {
+            document.getElementById("racereview").src = "https://www.formula1.com/content/dam/fom-website/sutton/2021/Mexico/Sunday/1351900602.jpg.transform/9col/image.jpg";
+            document.getElementById("pa").innerHTML="The Mexico GP was certainly one of the most vibrant races of the season. It was also one of the most important races for Red Bull Racing’s Sergio Perez, as it happened to be his Home Race. I’m sure he has been waiting all year for his home race in a competitive car to truly show what he’s got. Now that he is in a championship contending car, he had the right opportunity after years to give his home country the race they always deserved to get. He started the race from P4, after a solid performance for Saturday’s Qualifying Session, and he certainly did not let his hard work and efforts on Saturday go to waste."
+            document.getElementById("pb").innerHTML="While he was off his teammate Max Verstappen’s race pace for the entire race, he was still one of the fastest in the race, even closing the gap to Championship Contender Lewis Hamilton throughout. Mind you, it was a blisteringly hot day on the race day, and Sergio Perez’s drinking tank malfunctioned right at the start of the race. It is well known that during the course of the race, a driver can lose up to 4-5 Kilograms (roughly 10 lbs) of weight despite hydrating. Sergio Perez did not have this luxury, and still managed to finish P3 on the podium, beating and outdriving everyone but our 2 championship contenders. According to him, he started feeling dizzy right around lap 30, but continued to push. This affected his race pace, but not his podium finish."
+            document.getElementById("pc").innerHTML="On the other side of the Red Bull Garage we had Max Verstappen, the race winner. He went on in this race to extend his championship lead. Max didn’t do as well as he would have liked and started his race from P3. Ideally, the championship contender would have liked to start from pole position, but he just did not have the pace on Saturday. However, he made it up for it with a blisteringly fast race pace in the first stint leaving his championship rival Lewis Hamilton in the dust. While he did lose time to Lewis Hamilton in the second half of the race, he had built up enough of a gap to come out ahead and as the winner."
+            document.getElementById("pd").innerHTML="The race did not go that well for Lewis Hamilton clearly, as he wasn’t able to get the win despite starting from pole position. His race start was poor, and he lost his lead to Max Verstappen in the first corner itself, as Max went around the outside of Hamilton to take the lead and make it stick from the beginning till the end. Despite having significantly better race pace in the second stint, he was not able to make up for the lost time, and ended up finishing P2 for only 18 points. However, his team strategists were able to nick the fastest lap point from Max Verstappen by pitting Valtteri Bottas for fresh tires at the end, allowing him to take one additional point for the team."
+            document.getElementById("anim3").innerHTML="Review of Mexico Grand Prix"
 
+        }
+        var imageList = new Array("https://www.formula1.com/content/dam/fom-website/sutton/2021/BahrainTesting/Sunday/1306961117.jpg.transform/9col-retina/image.jpg","https://www.formula1.com/content/dam/fom-website/sutton/2021/BahrainTesting/Sunday/1306961885.jpg.transform/9col-retina/image.jpg","https://www.formula1.com/content/dam/fom-website/sutton/2021/BahrainTesting/Sunday/1306975727.jpg.transform/9col-retina/image.jpg")  //filenames of pictures
+        var counter=0  //State variable to identify which picture is showing
+        function playSlideShow()
+        {
+            document.getElementById("slideshowimg").src=imageList[counter]   // Show the picture from the list
+            counter = counter+1 // Update the counter to go to the next picture
+            if (counter == imageList.length)  // If past end of list, start again at first picture
+            {
+                counter=0
+            }
+            setTimeout("playSlideShow()",2000)  // This starts the function again in 2 seconds
+        }
+       
     </script>
 </head>
-<body onload="RaceCar(), TextShadow()">
+<body id="bod" onload="RaceCar(), TextShadow(), playSlideShow()">
     <div class="RaceAnim">
-        <img class="racing" src="RedBull.jpg" height="50px" id="racecar">
+        <img class="racing" src="https://www.formula1.com/content/dam/fom-website/teams/2021/red-bull-racing.png.transform/6col/image.png" height="50px" id="racecar">
         <hr>
 
 
@@ -99,7 +169,7 @@
         <br>
         <div class="body">
             <h1> Welcome to the World of Formula 1</h1>
-            <p><img src="https://cdn-1.motorsport.com/images/mgl/6D1aOb90/s1200/wet-weather-1.webp" style="float: right; padding-left: 25px;" alt="Max Verstappen at the Belgian Grand Prix, 2021."  width="600" ></p>
+            <p><img id="slideshowimg" src="https://cdn-1.motorsport.com/images/mgl/6D1aOb90/s1200/wet-weather-1.webp" style="float: right; padding-left: 25px;" alt="Max Verstappen at the Belgian Grand Prix, 2021."  width="600" ></p>
             <p class="text" style="text-align: justify;">
                 Welcome to Formula Top Three. Formula 1 consists of 10 teams, battling it out with cars that independently designed, with every single component being hand-made and custom designed for each of the 10 teams. It is the world's most competitive single seat motorsport racing competition. In a normal formula 1 season, 10 teams with 2 drivers each compete for the championship. Here, we will only discuss the top 3 teams.Currently, they are Mercedes, Red Bull Racing, and McLaren. A Formula 1 season consists of 2 championships: The drivers' championship, for drivers to become world champions, and the Constructors Championship, for the Teams to win the championships. 
             </p>
@@ -173,20 +243,25 @@
         <br> 
 
         <div class="body">
-            <h1> Experience Formula 1</h1>
+            <h1 id="anim1"> Experience Formula 1</h1>
+            <p class="cap" id="cap1">Click Heading to Expand.</p>
+            <div class="hide" id="hid1">
             <h2>Formula 1 from the eyes of a Driver</h2>
             <p style="text-align: center;"> <iframe width="1020" height="591" src="https://www.youtube.com/embed/JgpSHvw44z4?mute=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
             <p style="text-align: center;"> Yuki Tsunoda at Imola, Italy.</p>
             <h2>Hear the sound of an F1 Engine!</h2>
             <p style="text-align: center;"><audio src="F1_Engine.mp3" controls></audio></p>
         </div>
+        </div>
         <br>
         <br>
         <br>
       
     <div class="main">
-        <h1> Formula 1 Team Standings and Driver Standings, 2021 Season </h1>
+        <h1 id="anim2"> Formula 1 Team Standings and Driver Standings, 2021 Season </h1>
+        <p class="cap" id="cap2">Click Heading to Expand.</p>
 
+        <div class="hide" id="hid2">
         <table class="Teams" style="float: left; margin-left: 175px; width: 400px;">
             <tr>
             <th colspan="2"> Constructors Standings</th>
@@ -201,11 +276,11 @@
             </tr>
             <tr>
                 <td>3.</td>
-                <td>McLaren</td>
+                <td>Ferrari</td>
             </tr>
             <tr>
                 <td>4.</td>
-                <td>Ferrari</td>
+                <td>McLaren</td>
             </tr>
             <tr>
                 <td>5.</td>
@@ -251,19 +326,19 @@
             </tr>
             <tr>
                 <td>4.</td>
-                <td>Lando Norris</td>
-            </tr>
-            <tr>
-                <td>5.</td>
                 <td>Sergio Perez</td>
             </tr>
             <tr>
+                <td>5.</td>
+                <td>Lando Norris</td>
+            </tr>
+            <tr>
                 <td>6.</td>
-                <td>Carlos Sainz Jr.</td>
+                <td>Charles Leclerc</td>
             </tr>
             <tr>
                 <td>7.</td>
-                <td>Charles Leclerc</td>
+                <td>Carlos Sainz</td>
             </tr>
             <tr>
                 <td>8.</td>
@@ -280,29 +355,40 @@
         </table>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
+    </div>
     <br>
     <br>
     <br>
     <div class="body">
-        <h1>Review of the Last Race</h1>
-        <p>
-            <img src="https://www.formula1.com/content/dam/fom-website/sutton/2020/Turkey/Sunday/1285764050.jpg" style="float: right; padding-left: 20px;" width="600" alt="Turkish GP 2021">
+        <h1 id="anim3">Review of the Turkish Grand Prix</h1>
+        <p class="cap" id="cap3">Click Heading to Expand.</p>
+        <div class="hide" id="hid3">
+            <img id="racereview" src="https://www.formula1.com/content/dam/fom-website/sutton/2020/Turkey/Sunday/1285764050.jpg" style="float: right; padding-left: 20px;" width="600" alt="Turkish GP 2021">
             <!--Image Source: https://www.formula1.com/content/dam/fom-website/sutton/2020/Turkey/Sunday/1285764050.jpg-->
+        <p id="pa">
+            
             The last race was the Turkish Grand Prix held from 8th October to 10th October 2021. Held at the Istanbul Park, emotions were high after a wet race was predicted. Fans did not want a repeat of the Belgian Grand Prix, with the race being suspended after just a few laps. Excitement was also raised after it was announced that Lewis Hamilton, the championship contender, and current leader of the championship will be taking a penalty and starting the race from 11th position. This meant that Max Vertappen, the current championship rival and challenger would have his opportunity to regain the lead in the championship. 
         </p>
-
-        <p>
+        
+        <p id="pb">
             During the Race, Sergio Perez, the second Red Bull Driver showed his impressive skill by holding off Lewis Hamilton as he charged through the field in an attempt to retake the lead of the race. After being off his game for the last couple of Races, Sergio showed off why he's at Red Bull and defended meticulously to secure a podium for himself and his teammate Max. This secured Max's #1 spot in the standings after this race. 
         </p>
-        <p>
+        <p id="pc">
             After Valtteri's announcement that he will be leaving Mercedes after this season, he went on to take his first win of this season, after a late race charge. Proving to everyone why he's still called the "Flying Finn", he proved his true race pace after having somewhat of an off season. For sure George Russell, the driver replacing him next season will be stepping into some big shoes. 
         </p>
-        <p>
+        <p id="pd">
             Overall, tensions were high, and the rains only made the race more exciting than what was expected. All the drivers got to show off their wet racing skills, with strategies changing mid race. Lewis Hamilton opted to stay out and continue the race, whereas Max chose to pit and change tires. This move ultimately ended up costing Lewis the potential win at this race. Strategies played an even more important role in this race than they usually do, and Lewis will surely remember the importance of strategy going forward to the last 6 races of the season.
         </p>
+        <p style="text-align: center;"><button id="Review" onclick="ChangeReview()">Read Review of Mexico Grand Prix</button></p>
+        </div>
     </div>
     <br>
     <br>
-    
+    <div>
+        <hr style="height: 2px; color: darkgray;">
+        <h3 style="text-align: center;">Site Options</h3>
+        <p style="text-align: center;"><button id="siteop1" onclick="BgOpacity()">Increase Background Opacity</button> &nbsp; <button onclick="RevOpacity()">Decrease Background Opacity</button>
+        </p>
+    </div>
 </body>
 </html>

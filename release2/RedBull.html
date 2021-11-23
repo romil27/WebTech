@@ -18,6 +18,16 @@
         tr:nth-child(even) {background-color:lightgray;}
         p {text-align: justify;}
     </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#b1").click(function(){
+                $("#circmap").animate({width: '325px'})
+            })
+
+        });
+
+    </script>
 </head>
 <body>
     <div class="Navigation_Bar">
@@ -86,12 +96,13 @@
       <table style="padding-left: 30px; margin-right: 100px;" >
           <tr>
               <td>Car Design: </td>
-              <td><img src="RedBull.jpg" width="225" alt="Red Bull's Car"><!--Image Source: https://img.redbull.com/images/c_fill,w_2150,h_485,g_auto,f_auto,q_auto/redbullcom/2021/6/23/rz6vuuydgimui654jcli/rbr-rb16b-poster-family--></td>
+              <td><img src="https://www.formula1.com/content/dam/fom-website/teams/2021/red-bull-racing.png.transform/6col/image.png" width="225" alt="Red Bull's Car"></td>
               <td></td>
               <td>Home Circuit:</td>
-              <td><img src="https://openclipart.org/image/800px/291818" width="225" alt="Red Bull Ring Circuit"><!-- Image Source:https://openclipart.org/image/800px/291818 Image has been edited on Canva.--> </td>
+              <td><img id="circmap" src="https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Austria_Circuit.png.transform/7col/image.png" width="225" alt="Red Bull Ring Circuit"> </td>
           </tr>
       </table>
+      <p style="text-align: right; padding-right: 200px;"><button id="b1">Click to Enlarge</button> </p>
       <h2>About the Team Principal</h2>
       <p> 
             <img src="https://img.redbull.com/images/c_crop,w_3120,h_3120,x_748,y_0,f_auto,q_auto/c_scale,w_3440/redbullcom/2021/6/18/zkrvnjoljpuahhypgqqv/christian-horner-2021" width="500" style="float: right; padding-left: 20px;" alt="Portrait of Christian Horner"  >
