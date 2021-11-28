@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Page 2</title>
+
+	<style>
+	/* Your styles go here */
+	img {width:150px; height:100px; margin-left:0px}
+	p {text-align:center}
+    #p1 {width:150px; height:150px; background-color:azure; border:2px solid red}
+	button {margin:23px}
+	</style>
+	
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script>
+		// <![CDATA[  
+		var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
+        if (mobile) {  
+         document.location="page2mobile.htm"
+        }
+	// ]]>
+	$(function(){
+		
+	   // jQuery methods go here...
+		$("#img1").animate({marginLeft: '320px'}, 3000).delay(2000).animate({marginLeft: '0px'}, 3000);
+		$("#b1").click(function(){
+			$(this).fadeOut(3000);
+			$("#p1").animate({width: '300px'}, 3000);
+		});
+		$("#b2").click(function(){
+			$(this).fadeOut(3000);
+			$("#p1").delay(3000).animate({height: '300px'}, 3000);
+		});
+	  
+
+	});
+	 
+	</script>
+  </head>
+
+  <body>
+	<img id="img1" src="elephant.jpg" alt="elephant"/>
+      <p id="p1">Elephant</p>
+	<p><button id="b1">Button 1</button><button id="b2">Button 2</button></p>
+	
+  </body>
+</html>
